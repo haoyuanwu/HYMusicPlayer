@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="MQN-d4-xyR" id="PBZ-B8-VtJ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="MQN-d4-xyR" userLabel="AppDelegate" customClass="AppDelegate"/>
+        <customObject id="vaX-Fq-hfg" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="qa1-4G-fo3">
+            <items>
+                <menuItem title="Music" id="SWz-zm-IC4">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Music" systemMenu="apple" id="2wW-8C-2f5">
+                        <items>
+                            <menuItem title="About Music" id="yY9-eP-hUq">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="teN-05-udb"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="0Fr-Nq-KqS"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="wT4-k2-R4s"/>
+                            <menuItem isSeparatorItem="YES" id="Smb-Wb-XCM"/>
+                            <menuItem title="Services" id="mvB-41-ngM">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Services" systemMenu="services" id="NNI-T5-q84"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="QZP-N3-BCc"/>
+                            <menuItem title="Hide NSPanel" keyEquivalent="h" id="aFr-gl-qQM">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="IK9-KF-qab"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="YI2-az-Nf5">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="jeM-Bk-9nc"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="AII-kN-Svf">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="t6h-DG-9LF"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="ach-d7-3m0"/>
+                            <menuItem title="Quit Music" keyEquivalent="q" id="T0X-ih-JAA">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="dKJ-J6-7AE"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="编辑" id="P0f-gG-vOo">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="编辑" id="SZO-iW-r07">
+                        <items>
+                            <menuItem title="打开" id="PR8-kB-GOk">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="menuOpenFile:" target="-1" id="r9e-hj-u6O"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="本地上传" id="u5m-98-vQA">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="localUpdata:" target="-1" id="BJp-o3-81s"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="打开并上传文件" id="cP4-sp-AFJ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="openUpdataFile:" target="-1" id="WG6-Is-6oa"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="控制" id="M4l-i0-9mT">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="控制" id="AG1-kx-joB">
+                        <items>
+                            <menuItem title="播放" id="smD-HJ-gaG">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="player:" target="-1" id="gke-BW-OlZ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="上一曲" id="hxk-Ng-5wQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="prevMusic:" target="-1" id="1Rn-ic-JXi"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="下一曲" id="XLd-Xf-RIg">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="nextMusic:" target="-1" id="zQh-od-pAE"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="播放模式" id="aQf-Nt-4mI">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="播放模式" id="eYf-qt-Z1Q">
+                                    <items>
+                                        <menuItem title="顺序播放" state="on" id="h81-E5-npV">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="sequencePlayer:" target="-1" id="PHm-VU-U4m"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="随机播放" id="6er-Lv-Oo7">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="randomPlayer:" target="-1" id="AQy-gN-bdy"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="单曲循环" id="263-nD-MYO">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="circulationPlayer:" target="-1" id="5Ac-AP-Sab"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="窗口" id="vTd-xe-L4s">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="窗口" systemMenu="window" id="15g-lV-krN">
+                        <items>
+                            <menuItem title="最小化" keyEquivalent="m" id="2hC-hc-276">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="5aM-jj-j47"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="最大化" id="5WC-dc-HKd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="Hwb-fO-gkA"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="帮助" id="U1s-4l-E7Z">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="帮助" systemMenu="help" id="j08-CT-mtc">
+                        <items>
+                            <menuItem title="NSPanel Help" keyEquivalent="?" id="Suz-JQ-SHK">
+                                <connections>
+                                    <action selector="showHelp:" target="-1" id="AOK-PK-tzR"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-180" y="115"/>
+        </menu>
+    </objects>
+</document>

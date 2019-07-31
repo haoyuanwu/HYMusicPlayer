@@ -1,0 +1,67 @@
+//
+//  PrefixHeader.pch
+//  Music
+//
+//  Created by 吴昊原 on 2018/5/12.
+//  Copyright © 2018年 吴昊原. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#import <Cocoa/Cocoa.h>
+#import <COCOAKit/COCOAKit.h>
+#import "HYError.h"
+#import "Header.h"
+#import <AVFoundation/AVFoundation.h>
+#import "UploadFileApi.h"
+#import "BackGroundView.h"
+#import "UserListView.h"
+#import "MusicModel.h"
+#import "Masonry.h"
+#import <UIImageView+WebCache.h>
+#import "BaseModel.h"
+#import "Function.h"
+#import "UserModel.h"
+#import "PlayerModule.h"
+#import "NSEvent+KeyboardTouch.h"
+#import "LocalPlayerModule.h"
+#import "Music-Bridging-Header.h"
+
+#ifndef UIImage
+
+#define UIImage NSImage
+
+#endif
+
+#ifndef UIImageView
+
+#define UIImageView NSImageView
+
+#endif
+
+#ifndef __OPTIMIZE__
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define DLog(...)
+#endif
+
+#define SCREEN_WIDTH  [NSScreen mainScreen].frame.size.width
+#define SCREEN_HEIGHT  [NSScreen mainScreen].frame.size.height
+#define keyWindow [NSApp windows].firstObject
+#define musicData  @"musicArr"
+#define lineMusicData  @"lineMusicArr"
+
+#define loginNotificationName @"loginedNotification"
+#endif
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */

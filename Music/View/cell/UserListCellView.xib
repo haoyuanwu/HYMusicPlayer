@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <tableCellView identifier="listCellid" id="PeK-e6-yqq" customClass="UserListCellView">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="38"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-iO-oos">
+                    <rect key="frame" x="23" y="13" width="422" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="vyK-BT-oAB"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="9Yz-2D-8c5">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHK-1z-7S2">
+                    <rect key="frame" x="5" y="13" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ZN6-eL-8p9"/>
+                        <constraint firstAttribute="width" constant="20" id="rN2-Uh-3Ac"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="XKc-VU-3ez"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rHK-1z-7S2" firstAttribute="top" secondItem="PeK-e6-yqq" secondAttribute="top" constant="5" id="DPg-NC-lha"/>
+                <constraint firstItem="aWc-iO-oos" firstAttribute="top" secondItem="PeK-e6-yqq" secondAttribute="top" constant="5" id="SL9-Gd-UNe"/>
+                <constraint firstAttribute="trailing" secondItem="aWc-iO-oos" secondAttribute="trailing" id="V21-eU-m3a"/>
+                <constraint firstItem="rHK-1z-7S2" firstAttribute="leading" secondItem="PeK-e6-yqq" secondAttribute="leading" constant="5" id="ZOS-zp-DY7"/>
+                <constraint firstItem="aWc-iO-oos" firstAttribute="leading" secondItem="rHK-1z-7S2" secondAttribute="trailing" id="sQs-G7-cA5"/>
+            </constraints>
+            <connections>
+                <outlet property="imgView" destination="rHK-1z-7S2" id="Hzp-Eh-PPY"/>
+                <outlet property="textField" destination="aWc-iO-oos" id="Q5l-df-Us3"/>
+            </connections>
+            <point key="canvasLocation" x="152" y="72"/>
+        </tableCellView>
+    </objects>
+</document>
